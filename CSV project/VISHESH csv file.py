@@ -6,7 +6,7 @@ path = "america1.csv"
 x1 = pd.read_csv("america1.csv")
 # "C:\Users\MY LENOVO\Desktop\Vishesh\Python Progarms\america1.csv"
 
-# x1 = pd.DataFrame({'Month':['jan','feb','march','april','mqy','june','july','aug','sep'],'Cases':[3333,86677,76567,5433,6544,665,754,655,644],'TotalCases':[3838,7666,4335,75335,86544,8754,86543,9864,334],'Death':[727,7772,2872,2827,4949,626,30,39,47], 'totalCases':[2772,33,887,546,654,665,654,543,765],'Recovery':[7272,7626,9494,2726,727,73773,3737,262598,2727],'TotalRecovery':[4345,457,526,747,854,75,7765,756,85]})
+#x1 = pd.DataFrame({'Month':['jan','feb','march','april','mqy','june','july','aug','sep'],'Cases':[3333,86677,76567,5433,6544,665,754,655,644],'TotalCases':[3838,7666,4335,75335,86544,8754,86543,9864,334],'Death':[727,7772,2872,2827,4949,626,30,39,47], 'totalCases':[2772,33,887,546,654,665,654,543,765],'Recovery':[7272,7626,9494,2726,727,73773,3737,262598,2727],'TotalRecovery':[4345,457,526,747,854,75,7765,756,85]})
 df = x1
 headingList = ["Month", "Cases", "TotalDeathCases","Death", "TotalCases", "Recovered", "TotalRecovery"]
 
@@ -33,6 +33,7 @@ def menu():
 ================================================================================
     Press q to quit
 '''
+    
     print(startingline)
 
 
@@ -70,7 +71,7 @@ def new_name():  # 3
 
 def add_col():  # 4
     x5 = str(input('Enter new column name -  '))
-    print(f'Adding {x5} cloumn in America file')
+    print(f'Adding {x5} column in America file')
     print('\n')
     print('Enter values')
     y1 = []
@@ -115,17 +116,17 @@ def mean():  # 6.1
     columns()
     opti = int(input('Enter here \t '))
     if opti == 1:
-        print('    Mean is ', x1.Cases.mean())
+        print('    Mean is ', round(x1.Cases.mean(),2))
     elif opti == 2:
-        print('    Mean is ', x1.TotalCases.mean())
+        print('    Mean is ', round(x1.TotalCases.mean(),2))
     elif opti == 3:
-        print('    Mean is ', x1.Death.mean())
+        print('    Mean is ', round(x1.Death.mean(),2))
     elif opti == 4:
-        print('   Mean is ', x1.totalCases.mean())
+        print('   Mean is ', round(x1.totalCases.mean(),2))
     elif opti == 5:
-        print('    Mean is ', x1.Recovery.mean())
+        print('    Mean is ', round(x1.Recovery.mean(),2))
     elif opti == 6:
-        print('    Mean is ', x1.TotalRecovery.mean())
+        print('    Mean is ', round(x1.TotalRecovery.mean(),2))
     else:
         print('bad choose ')
 
@@ -137,17 +138,17 @@ def mode():  # 6.2
     opti = int(input('Enter here \t '))
 
     if opti == 1:
-        print('    Mode is ', x1.Cases.mod())
+        print('    Mode is ', round(x1.Cases.mod(),2))
     elif opti == 2:
-        print('    Mode is ', x1.TotalCases.mod())
+        print('    Mode is ', round(x1.TotalCases.mod(),2))
     elif opti == 3:
-        print('    Mode is ', x1.Death.mod())
+        print('    Mode is ', round(x1.Death.mod(),2))
     elif opti == 4:
-        print('    Mode is ', x1.totalCases.mod())
+        print('    Mode is ', round(x1.totalCases.mod(),2))
     elif opti == 5:
-        print('    Mode is ', x1.Recovery.mod())
+        print('    Mode is ', round(x1.Recovery.mod(),2))
     elif opti == 6:
-        print('    Mode is ', x1.TotalRecovery.mod())
+        print('    Mode is ', round(x1.TotalRecovery.mod(),2))
     else:
         print('bad choose ')
 
@@ -159,17 +160,17 @@ def median():  # 6.3
     opti = int(input('Enter here \t '))
 
     if opti == 1:
-        print('    Median is ', x1.Cases.median())
+        print('    Median is ', round(x1.Cases.median(),2))
     elif opti == 2:
-        print('    Median is ', x1.TotalCases.median())
+        print('    Median is ', round(x1.TotalCases.median(),2))
     elif opti == 3:
-        print('    Median is ', x1.Death.median())
+        print('    Median is ', round(x1.Death.median(),2))
     elif opti == 4:
-        print('    Median is ', x1.totalCases.median())
+        print('    Median is ', round(x1.totalCases.median(),2))
     elif opti == 5:
-        print('    Median is ', x1.Recovery.median())
+        print('    Median is ', round(x1.Recovery.median(),2))
     elif opti == 6:
-        print('    Median is ', x1.TotalRecovery.median())
+        print('    Median is ', round(x1.TotalRecovery.median(),2))
     else:
         print('bad choose ')
 
@@ -181,17 +182,17 @@ def var():  # 6.4
     opti = int(input('Enter here \t '))
 
     if opti == 1:
-        print('    Variation is ', x1.Cases.var())
+        print('    Variation is ', round(x1.Cases.var(),2))
     elif opti == 2:
-        print('    Variation is ', x1.TotalCases.var())
+        print('    Variation is ', round(x1.TotalCases.var(),2))
     elif opti == 3:
-        print('    Variation is ', x1.Death.var())
+        print('    Variation is ', round(x1.Death.var,2))
     elif opti == 4:
-        print('    Variation is ', x1.totalCases.var())
+        print('    Variation is ', round(x1.totalCases.var,2))
     elif opti == 5:
-        print('    Variation is ', x1.Recovery.var())
+        print('    Variation is ', round(x1.Recovery.var,2))
     elif opti == 6:
-        print('    Variation is ', x1.TotalRecovery.var())
+        print('    Variation is ', round(x1.TotalRecovery.var,2))
     else:
         print('bad choose ')
 
@@ -202,17 +203,17 @@ def std():  # 6.5
     opti = int(input('Enter here \t '))
 
     if opti == 1:
-        print('    Standard Variation is ', x1.Cases.std())
+        print('    Standard Variation is ', round(x1.Cases.std(),2))
     elif opti == 2:
-        print('    Standard Variation is ', x1.TotalCases.std())
+        print('    Standard Variation is ', round(x1.TotalCases.std,2))
     elif opti == 3:
-        print('    Standard Variation is ', x1.Death.std())
+        print('    Standard Variation is ', round(x1.Death.std,2))
     elif opti == 4:
-        print('    Standard Variation is ', x1.totalCases.std())
+        print('    Standard Variation is ', round(x1.totalCases.std,2))
     elif opti == 5:
-        print('    Standard Variation is ', x1.Recovery.std())
+        print('    Standard Variation is ', round(x1.Recovery.std,2))
     elif opti == 6:
-        print('    Standard Variation is ', x1.TotalRecovery.std())
+        print('    Standard Variation is ', round(x1.TotalRecovery.std,2))
     else:
         print('bad choose ')
 
