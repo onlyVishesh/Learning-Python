@@ -11,3 +11,4 @@ class Phone(Item):
         assert brokenPhone >= 0, f"Broken phone - {brokenPhone} is not greater than zero"
 
         self.brokenPhone = brokenPhone
+

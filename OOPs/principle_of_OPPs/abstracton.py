@@ -1,4 +1,8 @@
-# It is a concept op OPPs that only shows necessary attributes and hides unnecessary info
+""" 
+It is a concept op OPPs that only shows necessary attributes and hides unnecessary info
+we make a fn to send email which required diff fn like send, prepare_body, connect etc and can only needed to 
+access in class so we make it private using __ method
+"""
 
 import csv
 
@@ -61,6 +65,25 @@ class Item:
             return True
         else:
             return False
+        
+    # Creating diff fn that send_email needed
+
+    def __connect(self):
+        pass
+
+    def __prepare_body(self):
+        return f"""
+        Hello Someone.
+        we have {self.name} {self.quantity} times
+        regards, Vishesh"""
+    
+    def __send(self):
+        pass
+    
+    def send_email(self):
+        self.__connect("")
+        self.__prepare_body()
+        self.__send()
         
 
     # adding special method to change name from this Item class to all child classes
